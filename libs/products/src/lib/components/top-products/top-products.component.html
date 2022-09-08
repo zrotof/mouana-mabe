@@ -1,0 +1,16 @@
+<div class="top-products ">
+
+    <div class="content my-container">
+        <h3 class="title">Nos Meilleures Ventes</h3>
+
+        <p-carousel [value]="topProducts" styleClass="custom-carousel" [numVisible]="4" [numScroll]="4" [circular]="true" [responsiveOptions]="responsiveOptions">
+            <ng-template let-product pTemplate="item">
+                <div class="product-item">
+                    <div class="product-item-content">
+                        <products-product-item [product] = "product"></products-product-item>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>

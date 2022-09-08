@@ -1,0 +1,16 @@
+<div class="top-categories">
+
+    <div class="content my-container">
+        <span class="before-title">SÉLECTION</span>
+        <h3 class="title">Top Catégories</h3>
+
+        <div class="categories">
+                <div class="category" [routerLink]="'/'" *ngFor="let category of topCategoriesList">
+                    <div class="image">
+                        <img src="{{category.image}}" alt="{{category.name}}">
+                    </div>
+                    <span> {{category.name}} </span>
+                </div>
+        </div>
+    </div>
+</div>

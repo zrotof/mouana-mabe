@@ -1,0 +1,53 @@
+<div class="admin-sidebar">
+    <div class="logo">
+        <img src="../../../assets/logo/mouana-mabe-logo.png" alt="logo de la boutique mouana mabe">
+    </div>
+    <nav>
+        <ul>
+            <li routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+                <a>
+                    <i class="pi pi-home"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li routerLink="/produits" routerLinkActive="active-link">
+                <a>
+                    <i class="pi pi-box"></i>
+                    Produits
+                </a>
+            </li>
+
+            <li routerLink="/catégories" routerLinkActive="active-link">
+                <a>
+                    <i class="pi pi-list"></i>
+                    Catégories
+                </a>
+            </li>
+
+        
+            <li routerLink="/commandes" routerLinkActive="active-link">
+                <a>
+                    <i class="pi pi-check"></i>
+                    Commandes
+                </a>
+            </li>
+
+
+            <li routerLink="/utilisateurs" routerLinkActive="active-link">
+                <a>
+                    <i class="pi pi-users"></i>
+                    Utilisateurs
+                </a>
+            </li>
+
+
+            <li class="sign-out">
+                <a (click)="logoutUser()">
+                    <i class="pi pi-sign-out"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

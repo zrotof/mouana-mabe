@@ -1,0 +1,8 @@
+<div class="product" *ngIf="product" [routerLink]="'/produits/'+product._id">
+    <img [src]="product.imageVitrine" [alt]="product.name" >
+    <span class="product-name"> {{product.name | uppercase}} </span>
+
+    <div class="price-cart">
+        <span class="price"> {{product.price | currency:'EUR'}} </span>
+    </div>
+</div>

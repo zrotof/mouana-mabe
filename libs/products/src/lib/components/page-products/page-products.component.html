@@ -1,0 +1,37 @@
+<div class="page-products ">
+    <div class="content my-container">
+        <div class="product-header">
+            <span class="title-header">MOUANA MABE
+                <span class="sex-header">Hommes</span>
+            </span>
+            
+        </div>
+        
+        <div class="categories-bloc">
+
+            <div class="categories-bloc-hidder">
+                <button [class]="category.class" type="button" *ngFor="let category of categoriesList; let index = index" (click)="categoryChoosed(index, category.id)"> 
+                    {{category.name}}
+                </button>
+            </div>
+            
+        </div>
+
+        <div class="data">
+
+            <div class="filter">
+                <products-filter></products-filter>
+            </div>
+            
+            <div class="products-bloc">
+                <span class="products-price-sort">Trier Par <i class="pi pi-angle-down"></i></span>
+
+                <div class="products">
+                    <div class="products-content" *ngFor="let product of productsList">
+                        <products-product-item [product]="product"></products-product-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,194 @@
+<div class="admin-add-product">
+    <div *ngIf="!isEditMode">
+        
+        <h1 >Créer Produit</h1>
+        <h3>Création d'un nouveau Produit </h3>
+
+        <div class="buttons">
+            <button class="add" type="submit" (click)="onSaveProduct()"> 
+                <i class="pi pi-plus"></i>
+                Ajouter
+            </button>
+            <button class="cancel" type="button" (click)="onCancelAddEditProduct()"> 
+                <i class="pi pi-times"></i>
+                Annuler
+            </button>
+        </div>
+    </div>
+
+    <div *ngIf="isEditMode">
+        <h1 >Modifier Produit</h1>
+        <h3>Modification du produit </h3>
+
+        <div class="buttons">
+            <button class="add" type="submit" (click)="onEditProduct()"> 
+                <i class="pi pi-pencil"></i>
+                Modifier
+            </button>
+            <button class="cancel" type="button" (click)="onCancelAddEditProduct()"> 
+                <i class="pi pi-times"></i>
+                Annuler
+            </button>
+        </div>
+    </div>
+        
+    <form [formGroup]="productForm">
+
+        <div class="datas">
+
+            <div class="images-bloc">
+
+                <div class="single-image-bloc">
+                    <div class="image-bloc">   
+                        
+                        <label for="image-input">
+                            <i class="pi pi-upload"></i>
+                            Image Principale
+                        </label>
+                        <input type="file" id="image-input" accept="image/*" (change)="showImagePreview($event)">
+                        <img [src]="imageVitrineDisplay" id="image-previewed" class="single-image">
+     
+                    </div>
+                    <small *ngIf="(formControls['imageVitrineProduct'].invalid && (isProductSaveButtonClicked || isProductEditButtonClicked)) && !isEditMode" class="p-error">Image manquante</small>
+                </div>
+
+                <div class="multiple-images-bloc">
+                    <div class="upload-images">   
+                        
+                        <div class="multiple-images">
+
+                            <div class="images" *ngFor="let imageLink of imagesLinks">
+                                <img [src]="imageLink">
+                            </div>
+
+                        </div>
+
+                        <label for="images-input">
+                            <i class="pi pi-upload"></i>
+                            Autres images
+                        </label>
+                        <input type="file" id="images-input" accept="image/*" (change)="showImagePreview($event)" multiple>     
+                    </div>
+                    <small *ngIf="(formControls['imagesProduct'].invalid && (isProductSaveButtonClicked || isProductEditButtonClicked)) && !isEditMode" class="p-error">Images manquantes</small>
+                </div>
+
+            </div>
+
+     
+          
+            <div class="data">
+
+                <div class="input-bloc">
+                    
+                    <p-dropdown [options]="categoriesList" formControlName="categoryProduct" optionLabel="name"	placeholder="Choisir catégorie" (onChange)="onChangeCategory($event)" >
+                       
+                    </p-dropdown>
+
+                    <small *ngIf="formControls['categoryProduct'].invalid && (isProductSaveButtonClicked || isProductEditButtonClicked)" class="p-error">Catégorie manquante</small>
+                </div>
+
+                <div class="input-bloc">
+                    <label >Nom produit</label>
+                    <input type="text" pInputText formControlName="nameProduct">   
+                    <small *ngIf="formControls['nameProduct'].invalid && (isProductSaveButtonClicked || isProductEditButtonClicked)" class="p-error">Nom manquant</small>
+                </div>
+
+                <div class="input-bloc">
+                    <label >Prix produit</label>
+                    <p-inputNumber formControlName="priceProduct" [showButtons]="true" [min]="0" mode="currency" currency="EUR" locale="de-DE" styleClass="custom-price"></p-inputNumber>
+                    <small *ngIf="formControls['priceProduct'].invalid && ( isProductSaveButtonClicked || isProductEditButtonClicked)" class="p-error">Prix manquant</small>
+                </div>
+
+                <div class="input-bloc">
+                    <label>Couleur produit</label>
+                    <p-colorPicker formControlName="colorProduct"></p-colorPicker>
+                    <small *ngIf="formControls['colorProduct'].invalid && ( isProductSaveButtonClicked || isProductEditButtonClicked)" class="p-error">Couleur manquante</small>
+
+                </div>
+
+                <div *ngIf="!isProductWithManySizes" class="input-bloc">
+                    <label>Quantité</label>
+                    <p-inputNumber formControlName="quantityProduct" [showButtons]="true" [min]="0" styleClass="custom-price"></p-inputNumber>
+                    <small *ngIf="formControls['quantityProduct'].invalid && ( isProductSaveButtonClicked || isProductEditButtonClicked)" class="p-error">Quatité manquante</small>
+
+                </div>
+
+                <div class="input-bloc">
+                    <label>Top Produit ?</label>
+                    <p-inputSwitch formControlName="topProduct" ></p-inputSwitch>
+                </div>
+
+                <div class="input-bloc" >
+                    <label>Produit pour adultes ?</label>
+                    <p-inputSwitch style="width: fit-content;" formControlName="forAdult" (click)="isProductForAdult()"></p-inputSwitch>
+                </div>
+
+                <div  *ngIf="isProductIsForAdult" class="sexe">
+                    <div class="man">
+                        <label>Homme</label>
+                        <p-radioButton name="sexe" value="H" formControlName="sexe"></p-radioButton>
+                    </div>
+        
+                    <div class="woman">
+                        <p-radioButton  name="sexe" value="F" formControlName="sexe"></p-radioButton>
+                        <label>Femme</label>
+                    </div>
+        
+                </div>
+                <small *ngIf="formControls['sexe'].invalid && ( isProductSaveButtonClicked || isProductEditButtonClicked)" class="p-error">Sexe à choir</small>
+
+
+                
+
+                
+
+            </div>
+
+        </div>
+
+        <div  *ngIf="isProductWithManySizes === true" class="middle">
+            <span>Nombre de produits par taille</span>
+            <div class="sizes">
+                <div class="size">
+                    <label> XS </label>
+                    <p-inputNumber formControlName="sizeXS" [showButtons]="true" [min]="0" styleClass="custom-number"></p-inputNumber>
+                </div>
+
+                <div class="size">
+                    <label> S </label>
+                    <p-inputNumber formControlName="sizeS" [showButtons]="true" [min]="0" styleClass="custom-number"></p-inputNumber>
+                </div>
+
+                <div class="size">
+                    <label> M </label>
+                    <p-inputNumber formControlName="sizeM" [showButtons]="true" [min]="0" styleClass="custom-number"></p-inputNumber>
+                </div>
+
+                <div class="size">
+                    <label> L </label>
+                    <p-inputNumber formControlName="sizeL" [showButtons]="true" [min]="0" styleClass="custom-number"></p-inputNumber>
+                </div>
+
+                <div class="size">
+                    <label> XL </label>
+                    <p-inputNumber formControlName="sizeXL" [showButtons]="true" [min]="0" styleClass="custom-number"></p-inputNumber>
+                </div>
+
+                <div class="size">
+                    <label> XXL </label>
+                    <p-inputNumber formControlName="sizeXXL" [showButtons]="true" [min]="0" styleClass="custom-number"></p-inputNumber>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <label>Détails</label>
+            <p-editor formControlName="detailsProduct" [style]="{'height':'320px'}"></p-editor>
+            <small *ngIf="formControls['detailsProduct'].invalid && (isProductSaveButtonClicked || isProductEditButtonClicked)" class="p-error">Détails manquants</small>
+        </div>
+
+       
+    </form>   
+    <p-toast position="top-right"></p-toast> 
+
+</div>

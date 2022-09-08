@@ -1,0 +1,42 @@
+<div class="inspirations">
+    <div class="content my-container">
+        <div class="text-bloc">
+            <span class="before-title">INSPIRATIONS</span>
+            <h3 class="title">Trop De Styles</h3>
+            <span class="inspiration-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem culpa eligendi est neque doloribus inventore odit cumque! Repellendus, sapiente qui quia numquam illo facilis voluptates.</span>
+            <div class="slider-controls">
+                <ng-template ngFor let-control [ngForOf]="inspirationControlsList" let-i="index" let-isFirst="first" >
+                    <div class="slide-control" >
+                        <img 
+                            [ngClass]="isFirst ? 'active-control-image': '' " 
+                            src="{{control.imageUrl}}" 
+                            alt="{{control.imageAlt}}"
+                            (click)="showInspirantImages(control.name, i)"
+                        >
+                        <span [ngClass]="isFirst ? 'active-control-name': '' "> {{control.name}} </span>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="slider-bloc">
+
+            <swiper
+                [effect]="'cube'"
+                [grabCursor]="true"
+                [cubeEffect]="{
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94
+                }"
+                [pagination]="{ clickable : true }"
+                class="mySwiper"
+            >
+                <ng-template swiperSlide *ngFor="let inspirant of inspirantImagesList">
+                    <img src="{{inspirant.imageUrl}}" alt="{{inspirant.imageAlt}}" />
+                </ng-template>
+                
+            </swiper>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="banner">
+    
+    <div class="content  my-container">
+        <swiper #swiper class="swiper"
+    
+            [slidesPerView]="1"
+        >
+        
+                <ng-template swiperSlide *ngFor="let slide of slidesList">
+                    <div class="swiper-slide">
+                        <div class="text-bloc">
+
+                            <div class="text-bloc-content">
+                                <h1 class="title-banner">{{slide.title}}</h1>
+                                <span class="text">{{slide.subtitle}}</span>
+                                <span class="button" (click)="navigateTo(slide.link)">{{slide.buttonText}}</span>
+                            </div>
+
+                        </div>
+                        <div class="img-bloc">
+                            <img src="{{slide.imageUrl}}" alt="{{slide.imageUrl}}">
+                        </div>
+                    </div>
+                </ng-template>
+        </swiper>
+
+    </div>
+
+
+    <!--
+        <div class="content  my-container">
+        <swiper #swiper class="swiper"
+    
+            [loop]="true"
+            [navigation]="true"
+            [slidesPerView]="1"
+            [pagination]="{ clickable : true }"
+        >
+        
+                <ng-template swiperSlide *ngFor="let slide of slidesList">
+                    <div class="swiper-slide">
+                        <div class="text-bloc">
+
+                            <div class="text-bloc-content">
+                                <h1 class="title-banner">{{slide.title}}</h1>
+                                <span class="text">{{slide.subtitle}}</span>
+                                <span class="button" (click)="navigateTo(slide.link)">{{slide.buttonText}}</span>
+                            </div>
+
+                        </div>
+                        <div class="img-bloc">
+                            <img src="{{slide.imageUrl}}" alt="{{slide.imageUrl}}">
+                        </div>
+                    </div>
+                </ng-template>
+        </swiper>
+
+        <i (click)="arrowSlide(-1)" class="pi pi-angle-left"></i>
+        <i (click)="arrowSlide(1)" class="pi pi-angle-right"></i>
+         If we need pagination 
+        <div class="swiper-pagination"></div>
+    </div>
+     -->
+</div>

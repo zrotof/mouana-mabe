@@ -1,0 +1,181 @@
+
+
+        .items-bloc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 1200px;
+
+            .content{
+
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                .items-list{
+                    width: 500px;
+                    margin: 0 10px;
+
+                    .item{
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: white;
+                        height: 120px;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+
+                        img{
+                            width: 100px;
+                            background-color: black;
+                        }
+
+                        .item-infos{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            padding: 10px;
+                            flex: 1;
+
+                            .item-title{
+                                margin-bottom: 5px;
+                                font-size: 0.9em;
+                                font-weight: 550;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                width: 300px;
+                            }
+
+                            .item-price{
+                                font-weight: 450;
+                                font-size: 00.9em;
+                            }
+
+                            .item-size{
+                                font-size: 0.8em;
+                            }
+
+                            .number-bloc{
+                                display: flex;
+                                align-items: center;
+                                .buttons{
+                                    height: 25px;
+                                    width: 25px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border: 1px solid black;
+                                    cursor: pointer;
+
+                                    .pi{
+                                        font-size: 0.8em;
+                                    }
+                                }
+
+                                .buttons:hover{
+                                    background: black;
+                                    color: white;
+                                }
+
+                                .item-quantity{
+                                    padding: 0 5px;
+                                    width: 40px;
+                                    text-align: center;
+                                }
+                            }
+
+                        }
+
+                        .del-price{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            padding: 10px 10px 10px 0;
+
+                            .pi{
+                                font-size: 1.1em;
+                                cursor: pointer;
+                                
+                            }
+                            .pi:hover{
+                                font-size: 1.2em;
+                                color: red;
+                            }
+
+                            .info-total-price{
+                                font-size: 0.9em;
+                                font-weight: 350;
+                            }
+                        }
+                    }
+
+                }
+
+
+                .total-bloc{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+                    justify-content: space-between;
+                    width: 300px;
+                    margin: 0 10px;
+                    background-color: white;
+                    height: fit-content;
+                    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+                    .total-details{
+                        display: flex;
+                        flex-direction: column;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid black;
+
+                        .total-header{
+                            font-size: 1.2em;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+
+                        .price-net, .delivery-fees{
+                            font-size: 0.9em;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .price-total{
+
+                        display: flex;
+                        justify-content: space-between;
+                        font-weight: bold;
+                        margin: 20px 0;
+                        font-weight: bold;
+                        font-size: 1.1em;
+
+                    }
+
+                    .validate-order{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 20px 0;
+                        background-color: red;
+                        color: white;
+                        color: 550;
+                        cursor: pointer;
+                    }
+
+                    .validate-order:hover{
+                        background-color: rgb(168, 20, 20);
+                    }
+
+                }
+
+            }
+        }

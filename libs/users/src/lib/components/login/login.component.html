@@ -1,0 +1,41 @@
+<div class="login-register">
+    <div class="contener">
+        <div class="images">
+            <img src="assets/logo/mouana-mabe-logo.png" alt="Logo Mouana Mabe">
+        </div>
+        <div class="datas">
+            <span class="form-title">Page de connexion</span>
+
+            <form [formGroup]="loginForm">
+
+                <div class="input-bloc">
+                    <div class="p-inputgroup">
+
+                        <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+                        <input formControlName="email" type="text" pInputText placeholder="Email">         
+                    </div>
+                    <div *ngIf="isLoginFormSubmitted">
+                        <small class="p-error"*ngIf="isEmailIsNotRecognizedByTheDB">{{emailErrorMessage}}</small>
+                    </div>
+
+                </div>
+
+                <div class="input-bloc">
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                        <input formControlName="password" type="password" pPassword  [feedback]="false" placeholder="Mot de passe"/>
+                    </div>
+                    <div *ngIf="isLoginFormSubmitted">
+                        <small class="p-error" *ngIf="isPasswordIsNotRecognizedByTheDB">{{passwordErrorMessage}}</small>
+                    </div>
+                </div>
+
+                <button pButton type="button" class="p-button-rounded login-button" label="Se Connecter" (click)="onLogin()"></button>
+                <div *ngIf="isLoginFormSubmitted">
+                    <small class="p-error" *ngIf="isServerError">{{generalErrorMessage}}</small>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

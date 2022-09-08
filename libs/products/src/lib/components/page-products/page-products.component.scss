@@ -1,0 +1,114 @@
+.page-products{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .content{
+
+        margin-top: 5em;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .product-header{
+
+            display: flex;
+            align-items: baseline;
+            width: 100%;
+            margin: 25px 0;
+
+            .title-header{
+                font-size: 2em;
+                font-weight: 900;
+                font-style: normal;
+                font-style: italic;
+
+                .sex-header{
+                    font-weight: 200;
+                    font-size: 1.1em;
+                    font-style: normal;
+                }
+            }
+            
+        }
+
+        .categories-bloc{
+            padding: 5px 10px;
+            background-color: rgb(41, 41, 41);
+            margin-bottom:55px;
+            padding: 10px 0;
+            width: 100%;
+            border-radius: 100px ;
+
+    
+            .categories-bloc-hidder{
+                display: flex;
+                overflow-x: scroll;
+                height: fit-content;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                button{
+                    background-color: white;
+                    color: rgb(29, 29, 29);
+                    border-radius: 100px;
+                    padding: 6px 10px;
+                    margin: 0 15px;
+                    outline: none;
+                    width: fit-content;
+                    cursor: pointer;
+                    border: none;
+                    white-space: nowrap;
+                }
+                button:hover,
+                .active-category{
+                    color: white;
+                    background-color: red;
+                }
+            }
+    
+            .categories-bloc-hidder::-webkit-scrollbar { 
+                display: none;  /* Safari and Chrome */
+            }
+        }
+
+        .data{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .filter{
+                width: 210px;
+            }
+
+            .products-bloc{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+
+                .products-price-sort{
+                    font-style: italic;
+                    margin-bottom: 10px;
+                    text-align: right;
+                    cursor: pointer;
+                }
+                .products{
+                    display:flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    
+
+                    .products-content{
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

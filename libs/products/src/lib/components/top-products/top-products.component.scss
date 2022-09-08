@@ -1,0 +1,78 @@
+:host ::ng-deep .custom-carousel{
+    padding: 50px 0;
+
+    .p-carousel-prev,
+    .p-carousel-next
+    {
+        color: white;
+        background-color: rgb(41, 41, 41);
+        
+    }
+    .p-carousel-prev:enabled:hover,
+    .p-carousel-next:enabled:hover{
+        color: #ff0040;
+        font-weight: bold;
+        background-color: rgb(41, 41, 41);
+        
+    }
+
+    .p-carousel-indicator .p-link  {
+        background-color: #00000028;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        user-select: none;
+        box-shadow: none;
+    }
+
+    .p-carousel-indicator.p-highlight button{
+        background-color: #ff0040;
+        border: 6px solid #1d1d1d;
+    }
+
+    products-product-item{
+        width: 251px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        border-radius: 5px;
+        overflow: hidden;        
+    }
+}
+
+.top-products{
+    display: flex;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+
+        .title{
+            width: 100%;
+            text-align: center;
+        }
+
+        .product-item {
+
+            z-index: 2;
+            width: 100%;
+
+                .product-item-content{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+                    margin: 0.3rem;
+                    z-index: 2;
+                }
+        }
+    }
+
+}

@@ -1,0 +1,67 @@
+<div class="admin-add-category">
+    <div *ngIf="!isEditMode">
+        
+        <h1 >Créer Catégorie</h1>
+        <h3>Créeation d'une nouvelle catégorie </h3>
+
+        <div class="buttons">
+            <button class="add" type="submit" (click)="onSaveCategory()"> 
+                <i class="pi pi-plus"></i>
+                Ajouter
+            </button>
+            <button class="cancel" type="button" (click)="onCancelAddEditCategory()"> 
+                <i class="pi pi-times"></i>
+                Annuler
+            </button>
+        </div>
+    </div>
+
+    <div *ngIf="isEditMode">
+        <h1 >Modifier Catégorie</h1>
+        <h3>Modification de la catégorie </h3>
+
+        <div class="buttons">
+            <button class="add" type="submit" (click)="onEditCategory()"> 
+                <i class="pi pi-pencil"></i>
+                Modifier
+            </button>
+            <button class="cancel" type="button" (click)="onCancelAddEditCategory()"> 
+                <i class="pi pi-times"></i>
+                Annuler
+            </button>
+        </div>
+    </div>
+    
+    
+
+    <form [formGroup]="categoryForm" >
+
+        <div class="image-bloc-input">
+            <div class="upload-image">    
+                <label for="image-input">
+                    <i class="pi pi-upload"></i>
+                    Charger image
+                </label>
+                <input type="file" id="image-input" accept="image/*" (change)="showImagePreview($event)">
+                <img [src]="imageDisplay" id="image-previewed">
+            </div>
+            <small *ngIf="(formControls['imageCategory'].invalid && (isCategorySaveButtonClicked || isCategoryEditButtonClicked)) && !isEditMode" class="p-error">Image manquante</small>
+        </div>
+
+        <div class="input-blocs">
+            <div class="name-input">
+                <input formControlName="nameCategory" type="text" pInputText />
+                <small *ngIf="formControls['nameCategory'].invalid && ( isCategorySaveButtonClicked || isCategoryEditButtonClicked)" class="p-error">Nom manquant</small>
+            </div>
+
+            <div class="name-input">
+                <label>Catégorie avec des produits plusieurs tailles (XS, S, L, ...) ?</label>
+                <p-inputSwitch formControlName="withManySizeCategory"></p-inputSwitch>
+            </div>
+        </div>
+       
+
+    </form>   
+    <p-toast position="top-right"></p-toast> 
+
+</div>

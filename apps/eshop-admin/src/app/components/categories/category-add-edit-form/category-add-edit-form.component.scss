@@ -1,0 +1,167 @@
+.admin-add-category{
+    padding: 30px 5%;
+    display: flex;
+    flex-direction: column;
+
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+        padding: 5px 10px;
+        background-color: rgb(241, 241, 241);
+        margin: 60px 0 30px 0;
+    
+
+        button{
+            display: flex;
+            align-items: center;
+            outline: none;
+           
+            padding: 6px 10px;
+            border-radius: 100px;
+            color: green;
+            width: fit-content;
+            cursor: pointer;
+            background-color: white;
+            margin-left: 10px;
+
+            i{
+                margin-right: 5px;
+            }
+        }
+
+        .add{
+            border: solid #1172c2;
+            color: #1172c2;
+        }
+        .add:hover{
+            border: solid #1172c2;
+            color: white;
+            background-color: #1172c2;
+        }
+        .cancel{
+            border: solid gray;
+            color: gray;
+        }
+        .cancel:hover{
+            border: solid gray;
+            color: white;
+            background-color: gray;
+        }
+
+
+
+    }
+
+    form{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        .image-bloc-input{
+            display: flex;
+            flex-direction: column;
+
+            .upload-image{
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 200px;
+                margin-right: 10px;
+                img {
+                    width:100%;
+                    border-radius: 5px;
+                    display: none;
+                } 
+
+                input{
+                display:none;
+                }
+
+                label {
+                    width:100%;
+                    height: 50px;
+                    padding: 5px 10px;
+                    background:#1172c2;
+                    color:#fff;
+                    border-radius:5px;
+                    cursor:pointer;
+                    border: solid #1172c2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 10px 5px;
+
+                    i{
+                        margin-right: 5px;
+                    }
+                }
+
+                label:hover {
+                    
+                    background:white;
+                    color:#1172c2;
+                }
+
+            }
+
+            small{
+                margin:0 5px;
+
+            }
+        }
+
+        .input-blocs{
+            display: flex;
+            flex-wrap: wrap;            
+        .name-input{
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: column;
+
+            .info{
+                display: flex;
+                background-color: #11609827;
+                            width: 160px;
+                            height: 50px;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            border-radius: 5px;
+
+                            input {
+                                height: 100%;
+                                width: 100%;
+                                border: none;
+                                padding: 0 5px;
+                                outline: none;
+                                border-radius: 5px;
+                                background-color: unset;
+
+                            }
+
+                            input:not(:placeholder-shown) + label
+                            {
+                                transform: translate(0, -50%);
+                                opacity: 1;
+                                color: gray;
+                            }
+
+                            label{
+                                left: 10px;
+                                position: absolute;
+                                top: 0;
+                                opacity: 0;
+                                transition: all 0.2s;
+                            }
+            }
+
+            small{
+                margin:10px 0 0 0;
+
+            }
+        }
+}
+        
+    } 
+}

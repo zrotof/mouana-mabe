@@ -1,0 +1,16 @@
+<div class="gallery">
+    <div class="current-image">
+        <img [src]="currentImageUrl">
+    </div>
+    <div class="images-list">
+        <ul>
+            <li
+            *ngFor="let imageUrl of imagesUrl"
+            [ngStyle]="{'background-image': 'url('+imageUrl+')'}"
+            (mouseover)="changeCurrentImage(imageUrl)"
+
+            >
+            </li>
+        </ul>
+    </div>
+</div>

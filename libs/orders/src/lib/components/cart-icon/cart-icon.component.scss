@@ -1,0 +1,28 @@
+.cart-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .pi{
+        font-weight: 550;
+        font-size: 1.2em;
+    
+    }
+
+    span{
+        border-radius: 50%;
+        min-height: 20px;
+        min-width: 20px;
+        background-color: red;
+        position: absolute;
+        top: -11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: -9px;
+        font-size: 0.8em;
+        color: white;
+        font-weight: bold;
+    }
+}
+

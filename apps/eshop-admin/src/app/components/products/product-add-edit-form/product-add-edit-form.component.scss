@@ -1,0 +1,275 @@
+:host {
+    ::ng-deep .p-colorpicker-preview {
+            margin: 10px 10px 5px 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+    }
+
+    ::ng-deep .custom-price .p-inputnumber-input {
+            width: 100px;
+    }
+
+    ::ng-deep .custom-number .p-inputnumber-input {
+        width: 100px;
+    }
+}
+
+.admin-add-product{
+    padding: 30px 5%;
+    display: flex;
+    flex-direction: column;
+
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+        padding: 5px 10px;
+        background-color: rgb(241, 241, 241);
+        margin: 60px 0 30px 0;
+    
+
+        button{
+            display: flex;
+            align-items: center;
+            outline: none;
+           
+            padding: 6px 10px;
+            border-radius: 100px;
+            color: green;
+            width: fit-content;
+            cursor: pointer;
+            background-color: white;
+            margin-left: 10px;
+
+            i{
+                margin-right: 5px;
+            }
+        }
+
+        .add{
+            border: solid #1172c2;
+            color: #1172c2;
+        }
+        .add:hover{
+            border: solid #1172c2;
+            color: white;
+            background-color: #1172c2;
+        }
+        .cancel{
+            border: solid gray;
+            color: gray;
+        }
+        .cancel:hover{
+            border: solid gray;
+            color: white;
+            background-color: gray;
+        }
+
+
+
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .datas{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .images-bloc{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 620px;
+
+                .single-image-bloc{
+
+                    display: flex;
+                    flex-direction: column;
+                    margin: 20px 0 0 0;
+
+                    .image-bloc{
+
+                        display: flex;
+                        align-items: flex-start;
+
+
+                        .single-image {
+                            width:200px;
+                            height: 300px;
+                            border-radius: 5px;
+                            display: none;
+                        }
+
+                        input{
+                        display:none;
+                        }
+
+                        label {
+                            width:fit-content;
+                            height: 50px;
+                            padding: 0 10px;
+                            background:#1172c2;
+                            color:#fff;
+                            border-radius:5px;
+                            cursor:pointer;
+                            border: solid #1172c2;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            i{
+                                margin-right: 5px;
+                            }
+                        }
+
+                        label:hover {
+                            
+                            background:white;
+                            color:#1172c2;
+                        }
+
+                    }
+
+                    small{
+                        margin:0 5px;
+
+                    }
+                }
+
+                .multiple-images-bloc{
+
+                    display: flex;
+                    flex-direction: column;
+                    margin: 40px 0 0 0;
+
+                    .upload-images{
+
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+
+
+                        .multiple-images{
+                            flex-wrap: wrap;
+                            width: fit-content;
+                            display: none;
+
+                            .images {
+                                width:120px;
+                                height: 150px;
+                                border-radius: 5px;
+                                margin: 0 15px 15px 0;
+                                
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            } 
+                        }
+                        
+
+                        input{
+                        display:none;
+                        }
+
+                        label {
+                            width:fit-content;
+                            height: 50px;
+                            padding: 0 10px;
+                            background:#1172c2;
+                            color:#fff;
+                            border-radius:5px;
+                            cursor:pointer;
+                            border: solid #1172c2;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            i{
+                                margin-right: 5px;
+                            }
+                        }
+
+                        label:hover {
+                            
+                            background:white;
+                            color:#1172c2;
+                        }
+
+                    }
+
+                    small{
+                        margin:0 5px;
+
+                    }
+                }
+            }
+
+            .data{
+                display: flex;
+                flex-direction: column;
+
+                .input-bloc{
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+
+                    small{
+                        margin:10px 0 0 0;
+
+                    }
+                }
+
+                .sexe{
+                    display: flex;
+                    margin-top: 20px;
+
+                    .man{
+                        margin-right: 5px;
+                        label{
+                            margin-right:10px;
+                        }
+                    }
+
+                    .woman{
+                        margin-left: 5px;
+                        label{
+                            margin-left:10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .middle{
+            display: flex;
+            margin: 20px 0;
+            flex-direction: column;
+            .sizes{
+                margin: 10px 0px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;     
+                padding: 10px;
+                background-color: rgb(223, 223, 223);
+
+                .size{
+                    margin: 10px 5px;
+                    display: flex;
+                    flex-direction: column;
+                }
+            } 
+        }
+
+        .bottom{
+            margin: 20px 0;
+        }
+    } 
+}

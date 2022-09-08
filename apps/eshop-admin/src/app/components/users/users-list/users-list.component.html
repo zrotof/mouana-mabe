@@ -1,0 +1,30 @@
+<div class="admin-list-users">
+    <h1>Utilisateurs</h1>
+    <h3>Liste de nos utilisateurs </h3>
+
+
+        <p-table [value]="usersList" responsiveLayout="scroll">
+            
+            <ng-template pTemplate="header">
+                <tr>
+                    <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+                    <th> email</th>
+                    <th></th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-user>
+                <tr>
+                    <td>{{user.lastName}} {{user.firstName}}</td>
+                    <td>{{user.email}}</td>
+                    <td class="delete-edit">
+                        <i (click)="editUser(user._id)" class="pi pi-pencil"></i>
+                    </td>
+                </tr>
+            </ng-template>
+
+        </p-table>
+        <p-confirmDialog header="Confirmation de suppression" acceptLabel="Oui" rejectLabel="Non" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
+        </p-confirmDialog>
+        <p-toast position="top-right"></p-toast> 
+
+</div>

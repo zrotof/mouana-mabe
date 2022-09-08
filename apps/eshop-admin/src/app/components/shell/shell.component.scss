@@ -1,0 +1,16 @@
+.admin{
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    eshop-admin-sidebar{
+        position: fixed;
+        width: 200px;
+        top: 0;
+    }
+
+    .content{
+        width: calc(100% - 200px);
+        margin-left: 200px;
+    }
+}

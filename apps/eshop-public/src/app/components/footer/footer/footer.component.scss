@@ -1,0 +1,129 @@
+footer{
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        .top{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #292929;
+
+            .content{
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 50px 0;
+                color: white;
+
+                .boutique,
+                .categories,
+                .paiements
+                {
+                    display: flex;
+                    flex-direction: column;
+
+                    .header{
+                        position: relative;
+                        margin-bottom: 15px;
+                    }
+
+                    .header::after{
+                        position: absolute;
+                        content: '';
+                        width: 50px;
+                        height: 3px;
+                        bottom: -5px;
+                        left: 0;
+                        background-color: red;
+                    }
+
+                    span{
+                        margin-top: 5px;
+                        font-size: 0.85em;
+                        font-weight: 200;
+                        cursor: pointer;
+                    }
+
+                    p{
+                        margin-top: 5px;
+                        font-size: 0.85em;
+                    }
+
+                    span:hover{
+                        color: red;
+                    }
+
+                    .reseaux{
+                        margin-top: 20px;
+                        flex-wrap: wrap;
+                        display: flex;
+
+                        img{
+                            margin-right: 10px;
+                            width: 32px;
+                            height: 32px;
+                            cursor: pointer;
+
+                        }
+                    }
+
+                    .paiement{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 10px;
+
+                        img{
+                            width: 60px;
+                            height: 40px;
+                            margin-right: 10px;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+            width: 100%;
+            padding: 20px 0;
+            
+
+            .copyright{
+                font-size: 0.9em;
+                color: red;
+            }
+
+            .webmaster{
+                font-size: 0.8em;
+                color: rgb(185, 185, 185);
+                margin-top: 10px;
+
+                display: flex;
+                justify-content: center;
+
+
+                a{
+                    margin-left: 5px;
+                    cursor: pointer;
+
+                }
+
+                a:hover{
+                    color: #09A0F0;
+                }
+
+
+            }
+        }
+    
+}

@@ -1,0 +1,220 @@
+.delivery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1200px;
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        .connect-bloc{
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-around;
+            padding: 20px;
+            width: 100%;
+
+            .connect{
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                padding: 30px ;
+                width: 40%;
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+                .subtitle{
+                    font-style: 550;
+                    font-size: 1.2em;
+                }
+
+                .intro{
+                    font-size: 0.85em;
+                    margin: 10px 0;
+                }
+
+
+                form{
+                    width: 100%;
+
+                    .input-bloc{
+                        display: flex;
+                        width: 100%;
+                        flex-direction: column;
+                        margin-top: 20px;
+
+                        label{
+                            font-size: 0.9em;
+                        }
+
+                        input{
+                            width: 100%;
+                            height: 40px;
+                            padding: 0 5px;
+                        }
+                    }
+
+                    button{
+                        margin-top: 20px;
+                        width: 100%;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-weight: bold;
+                        border: none;
+                        background-color: black;
+                    }
+                }
+
+                .forgot{
+                    text-align: right;
+                    padding-top: 15px;
+                    font-size: 0.85em;
+                    font-weight: bold;
+                    border-bottom: 1px solid black;
+                    width: fit-content;
+                }
+
+            }
+
+            .create-incognito{
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+
+                .create{
+                    background-color: white;
+                    margin-bottom: 20px;
+                    padding: 30px ;
+                    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+                    .subtitle{
+                        font-style: 500;
+                        font-size: 1.2em;
+                    }
+
+                    .intro{
+                        font-size: 0.85em;
+                        margin: 10px 0;
+                    }
+
+                    button{
+                        margin-top: 20px;
+                        width: 100%;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: black;
+                        font-weight: bold;
+                        background-color: white;
+                        border: 2px solid black;
+                    }
+
+                }
+
+                .incognito{
+                    background-color: white;
+                    padding: 30px;
+                    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+                    .subtitle{
+                        font-style: 500;
+                        font-size: 1.2em;
+                    }
+
+                    .intro{
+                        font-size: 0.85em;
+                        margin: 10px 0;
+                    }
+
+                    button{
+                        margin-top: 20px;
+                        width: 100%;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: black;
+                        font-weight: bold;
+                        background-color: white;
+                        border: 2px solid black;
+                    }
+                }
+
+            }
+        }
+
+        .infos{
+            display: flex;
+            margin-top: 50px;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                background-color: white;
+                margin: 40px 0;
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+                padding: 30px ;
+
+
+
+
+
+                .names-bloc, .zip-town{
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    .input-bloc-short{
+                        width: 49%;
+                        margin-top: 20px;
+                       display: flex;
+                       flex-direction: column;
+
+                       label{
+                           font-size: 0.9em;
+                       }
+
+                       input{
+                        width: 100%;
+                        height: 40px;
+                        padding: 0 5px;
+                        }
+                    }
+                }
+
+                .input-bloc-long{
+                        width: 100%;
+                        margin-top: 20px;
+                        display: flex;
+                        flex-direction: column;
+
+
+                        label{
+                           font-size: 0.9em;
+                        }
+                        input{
+                            margin-top: 2px;
+                            width: 100%;
+                            height: 40px;
+                            padding: 0 5px;
+                        }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.admin-sidebar{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8253676470588236) 100%);
+    padding: 20px;
+    height: 100vh;
+
+    .logo{
+        width: 100%;
+        cursor: pointer;
+        img{
+            width: 100%;
+        }
+    }
+
+    nav{
+        margin-top: 20%;
+        color: white;
+
+        ul{
+            li{
+                padding: 5px 10px;
+                margin: 10px 0;
+                cursor: pointer;
+                border-radius: 100px;
+
+                a {
+
+                display: flex;
+                align-items: center;
+
+                i{
+                        font-size: 20px;
+                        margin-right: 5px;
+                    }
+                }
+                
+            }
+
+            li:hover, .active-link{
+                color: black;
+                background-color: white;
+                font-weight: bold;
+            }
+
+            .sign-out{
+                color: red;
+            }
+            .sign-out:hover{
+                background-color: rgb(196, 138, 138);
+                color: red;
+            }
+
+        }
+    }
+}

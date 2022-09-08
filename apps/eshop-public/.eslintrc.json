@@ -13,7 +13,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "mouanamabe",
+            "prefix": "eshop-public",
             "style": "camelCase"
           }
         ],
@@ -21,10 +21,13 @@
           "error",
           {
             "type": "element",
-            "prefix": "mouanamabe",
+            "prefix": "eshop-public",
             "style": "kebab-case"
           }
-        ]
+        ],
+        // note you must disable the base rule as it can report incorrect errors
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": ["off"]
       }
     },
     {

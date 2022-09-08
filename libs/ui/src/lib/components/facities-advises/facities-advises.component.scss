@@ -1,0 +1,36 @@
+.facilities-advices{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228, 228, 228);
+    margin-top: 50px;
+
+    .content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 35px;
+        flex-wrap: wrap;
+
+        .advice{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+
+            i{
+                font-size: 1.8em;
+            }
+
+            span{
+                margin-top: 10px;
+                font-size: 0.9em;
+
+            }
+        }
+        
+    }
+}

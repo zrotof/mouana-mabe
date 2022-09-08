@@ -1,0 +1,52 @@
+<div class="items-bloc">
+
+    <div class="content my-container">
+        <div class="items-list">
+            <div class="item" *ngFor="let product of productList">
+                <img src="{{product.image}}">
+                <div class="item-infos">
+                    <span class="item-title"> {{product.name}}</span>
+                    <span class="item-size" *ngIf="product.size">( Taille : {{product.size}} )</span>
+                    <div class="number-bloc">
+                        <span (click)="minusProduct(product.id, product.size)" class="buttons">
+                            <i class="pi pi-minus"></i>
+                        </span>
+                        <span class="item-quantity">{{product.itemQuantity}}</span>
+                        <span (click)="plusProduct(product.id, product.size)" class="buttons">
+                            <i class="pi pi-plus"></i>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="del-price">
+                    <i class="pi pi-trash" (click)="deleteProduct(product.id, product.size)"></i>
+                    <span class="info-total-price"> {{product.price * product.itemQuantity | number}} </span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="total-bloc">
+            
+            <div class="total-details">
+                <span class="total-header">TOTAL</span>
+            
+                <div class="price-net">
+                    <span>Valeur de la commande</span>
+                    <span> {{total | number}} </span>
+                </div>
+                <div class="delivery-fees">
+                    <span>Frais de livraison</span>
+                    <span>{{fees}}€</span>
+                </div>
+            </div>
+
+            <div class="price-total">
+                <span>Total de la commande</span>
+                <span>{{total+fees |number}}</span>
+            </div>
+
+            <span class="validate-order" (click)="onValidateCart()"> VALIDER MON PANIER</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+.product{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+    img{
+        height: 250px;
+        width: 100%;
+    }
+
+    .product-name{
+        margin-top: 15px;
+        font-weight: 400;
+        font-size: 0.95em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 10px;
+    }
+
+    .price-cart{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 5px;
+        padding: 0 10px 10px 10px;
+
+        .price{
+            color:  #ff0040;
+            font-weight: 550;
+        }
+
+    }
+
+}
+
+.product:hover{
+
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+    img{
+        transform: scale(0.9);
+    }
+}

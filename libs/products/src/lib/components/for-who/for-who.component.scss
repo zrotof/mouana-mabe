@@ -1,0 +1,123 @@
+.who{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:100px;
+
+  
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .person-bloc{
+            margin-top: 50px;
+            height: 300px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .person{
+                width: 32%;
+                height: 100%;
+                position: relative;
+                border-radius: 5px;
+                overflow: hidden;
+                transition: all 0.3s ease-in ;
+                .icon-text{
+
+                    color: white;
+                    font-weight: 500;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    z-index: 2;
+                    cursor: pointer;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.3s ease-in ;
+
+
+                    .pi{
+                        font-size: 1.5em;
+                        display: none;
+                    }
+
+                    span{
+                        font-size: 1.2em;
+                    }
+                }
+
+                
+            }
+
+            .person::after{
+            
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.205);
+                position: absolute;
+                top: 0;
+                left: 0;
+            
+            }
+
+            .person:hover{
+
+                .icon-text{
+                    color: red;
+                    padding: 3px 10px;
+                    border: 3px solid red;
+                    border-radius: 100px;
+                    .pi{
+                        display: block;
+                    }
+                }
+
+                .icon-text:hover{
+                    background-color: red;
+                    color: white;
+                }
+            }
+
+            .person:hover::after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.55);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .man{
+                background-image: url("../../../../../../apps/eshop-public/src/assets/img/who-men.jpeg");
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .woman{
+                background-image: url("../../../../../../apps/eshop-public/src/assets/img/who-women.jpeg");
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .child{
+            background-image: url("../../../../../../apps/eshop-public/src/assets/img/who-children.jpeg");
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            }
+        }
+
+    }
+}

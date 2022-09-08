@@ -1,0 +1,40 @@
+<header>
+    <div class="content my-container">
+        <div class="logo" routerLink="" >
+            <img src="../../../../assets/img/mouana-mabe-logo.png" alt="Logo Mouana mabe">
+        </div>
+        <nav>
+            <ul>
+                <li >
+                    <a routerLink="/hommes" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact: true}">Hommes</a>
+                </li>
+                
+                <li>
+                    <a routerLink="/femmes">Femmes</a>
+                </li>
+                
+                <li>
+                    <a>Enfants</a>
+                </li>
+                
+                <li>
+                    <a>Accesoires</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="actions">
+            <div class="search-bar">
+                <input type="text"  placeholder="Rechercher">    
+                <i class="pi pi-search"></i>     
+            </div>
+            <i class="pi pi-user"></i>
+            <orders-cart-icon></orders-cart-icon>
+            <div class="languages">
+                <div class="current-language">
+                    <img src="../../../../assets/img/drapeau-fr.png" alt="Langue choisie">
+                    <i class="pi pi-angle-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

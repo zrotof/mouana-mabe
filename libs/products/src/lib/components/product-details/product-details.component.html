@@ -1,0 +1,79 @@
+<div class="product-details">
+    <div class="content my-container" *ngIf="product">
+        <div class="top">
+            <div class="gallery">
+                <ui-gallery [imagesUrl]="productImagesUrl"></ui-gallery>
+            </div>
+            <div class="datas" >
+                <span class="brand">Mouana Mabe</span>
+                <span class="product-name"> {{product.name | uppercase}} </span>
+                <span class="product-price">{{product.price | currency:'EUR'}} </span>
+                <div class="tailles-bloc" *ngIf="product.category.withManySize">
+                    <span> Choisir taille:</span>
+                    <div class="tailles">
+                        <div class="taille active" (click)="chooseSize('XS')">XS</div>
+                        <div class="taille"  (click)="chooseSize('S')">S</div>
+                        <div class="taille"  (click)="chooseSize('M')">M</div>
+                        <div class="taille"  (click)="chooseSize('L')">L</div>
+                        <div class="taille"  (click)="chooseSize('XL')">XL</div>
+                        <div class="taille"  (click)="chooseSize('XXL')">XXL</div>
+                    </div>
+                </div>
+
+                <div class="colors-bloc">
+                    <span> Choisir Couleur:</span>
+                    <div class="colors">
+                        <div class="colors-content" *ngFor="let color of colorsArray">
+                            
+                            <span 
+                                [ngClass] = "color.active ? 'active-color color': 'color'"  
+                                [ngStyle] = "{'background-color': color.value}" 
+                                (click) = "showproductByColor(color, product.reference)"
+                            >
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quantity-bloc">
+                    <p-inputNumber 
+                        [showButtons]="true" 
+                        mode="decimal"
+                        buttonLayout="horizontal" 
+                        spinnerMode="horizontal"
+                        decrementButtonClass="p-button-secondary" 
+                        incrementButtonClass="p-button-secondary" 
+                        incrementButtonIcon="pi pi-plus" 
+                        decrementButtonIcon="pi pi-minus"
+                        [min]="1" 
+                        [max]="20"
+                        [(ngModel)]="quantity"
+                        styleClass="custom-quantity"
+                    >
+                    </p-inputNumber>
+                </div>
+
+                <div class="add-cart"
+                    (mouseover)="checkIfSizeChoosed(product.category.withManySize)"
+                    (click)="addProductTocart(product.category.withManySize)"
+                    [pTooltip]="tooltip"
+                    tooltipPosition="bottom">                        
+                        Ajouter au panier
+                </div>
+
+            </div>
+        </div>
+        <div class="middle">
+            <div class="product-infos-header">
+                <span class="active-infos-header">Détails</span>
+                <span>Avis</span>
+            </div>
+
+            <div class="product-infos-data">
+                <div [innerHTML]="product.details"></div>
+            </div>
+        </div>
+           
+    </div>
+</div>
